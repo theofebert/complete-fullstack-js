@@ -1,0 +1,44 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "Learn how to code programming with Javascript Node Modules, MongoDB & React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theofebert/complete-fullstack-js.git"
+  },
+  "keywords": [
+    "Fullstack Javascript",
+    "NodeJS MongoDB React",
+    "Lynda Course",
+    "Samerbuna Coach",
+    "Learning Javascript"
+  ],
+  "author": "Theo Adore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theofebert/complete-fullstack-js/issues"
+  },
+  "homepage": "https://github.com/theofebert/complete-fullstack-js#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.3.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "nodemon": "^1.19.1",
+    "webpack": "^4.39.2"
+  }
+}
