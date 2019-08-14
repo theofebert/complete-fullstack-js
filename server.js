@@ -13,16 +13,6 @@ const server = express();
 // Steps 2.4_A
 server.set('view engine', 'ejs');
 
-// Steps 2.3_F
-// server.get('/', (req, res) => {
-//   res.send('Hello Express!');
-// });
-
-// Steps 2.4_C
-// server.get('/', (req, res) => {
-//   res.render('index');
-// });
-
 // Steps 2.4_D
 server.get('/', (req, res) => {
   res.render('index', {
