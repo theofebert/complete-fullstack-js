@@ -1,32 +1,46 @@
-// Steps 2.2_A
-import https from 'https';
+// Steps 2.3_D
+import config from './config';
 
-// Steps 2.2_B
-// https.get('https://www.lynda.com', res => {
-//   console.log('Response status code: ', res.statusCode);
-//
-//   res.on('data', chunk => {
-//       console.log(chunk.toString());
+// Steps 2.3_P
+import apiRouter from './api';
+
+// Steps 2.3_I
+// Steps 2.3_L :
+//import fs from 'fs';
+
+// Steps 2.3_A
+import express from 'express';
+
+// Steps 2.3_B
+const server = express();
+
+// Steps 2.3_F
+server.get('/', (req, res) => {
+  res.send('Hello Express!');
+});
+
+// Steps 2.3_G
+// server.get('/about.html', (req, res) => {
+//   res.send('The About Page');
+// });
+
+// Steps 2.3_J
+// server.get('/about.html', (req, res) => {
+//   fs.readFile('./about.html', (err, data) => {
+//       res.send(data.toString());
 //     });
 // });
 
-// Steps 2.2_C
-import http from 'http';
+// Steps 2.3_Q
+server.use('/api', apiRouter);
 
-// Steps 2.2_D then Steps 2.2_G
-//const server = http.createServer();
+// Steps 2.3_K : simply magis middleware
+server.use(express.static('public'));
 
-// Steps 2.2_E
-//server.listen(8080);
+// Steps 2.3_C
+// server.listen();
 
-// Steps 2.2_F
-server.on('request', (req, res) => {
-  res.write('Hello HTTP!\n');
-  setTimeout(() => {
-    res.write('I can stream!\n');
-    res.end();
-  }, 3000);
+// Steps 2.3_E
+server.listen(config.port, () => {
+  console.info('Express listening on port: ', config.port);
 });
-
-// Steps 2.2_H
-server.listen(8080);
