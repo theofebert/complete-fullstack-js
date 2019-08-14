@@ -4,7 +4,8 @@
   "description": "Learn how to code programming with Javascript Node Modules, MongoDB & React",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node server.js --ignore public/",
+    "dev": "webpack -wd"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/theofebert/complete-fullstack-js#readme",
   "dependencies": {
+    "ejs": "^2.6.2",
     "express": "^4.17.1",
     "mongodb": "^3.3.0",
     "react": "^16.9.0",
